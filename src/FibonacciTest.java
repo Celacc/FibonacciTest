@@ -17,7 +17,7 @@ class FibonacciTest {
         Fibonacci fibonacci = new Fibonacci(0);
 
         int sequenceValue = fibonacci.fib(-5);
-        assertEquals(55, sequenceValue, 0, "Condition not met"); //Expected 5 on index -5
+        assertEquals(5, sequenceValue, 0, "Condition not met"); //Expected 5 on index -5
     }
 
     @Test
