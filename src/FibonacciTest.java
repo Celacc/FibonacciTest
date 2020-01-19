@@ -4,6 +4,8 @@
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
@@ -12,25 +14,24 @@ class FibonacciTest {
     void fibPos() {
         Fibonacci fibonacci = new Fibonacci(0);
 
-        int sequenceValue = fibonacci.fib(10);
-        assertEquals(55, sequenceValue, 0, "Condition not met"); //Expected 55 on index 10
+        int indexNumber = fibonacci.fib(10);
+        assertEquals(55, indexNumber, 0, "Condition not met in fibPos"); //Expected 55 on index 10
     }
 
     @Test //Testing negative index values
     void fibNeg() {
         Fibonacci fibonacci = new Fibonacci(0);
 
-        int sequenceValue = fibonacci.fib(-5);
-        assertEquals(5, sequenceValue, 0, "Condition not met"); //Expected 5 on index -5
+        int indexNumber = fibonacci.fib(-5);
+        assertEquals(5, indexNumber, 0, "Condition not met in fibNeg"); //Expected 5 on index -5
     }
 
-    @Test
-    void printFibonacci() {
-
-    }
-
-    @Test
+    @Test //Testing text file creation as output.
     void writeFibonacci() {
+        Fibonacci fibonacci = new Fibonacci(0);
+        fibonacci.writeFibonacci();
 
+        File f = new File("FibonacciResults.txt");
+        assertTrue(f.exists(), "File does not exist");
     }
 }
