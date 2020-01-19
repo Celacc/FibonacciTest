@@ -87,7 +87,7 @@ public class Fibonacci {
     public void writeFibonacci() {
         FileWriter outputFile = null;
         try {
-            outputFile = new FileWriter("WrongFile.txt");
+            outputFile = new FileWriter("FibonacciResults.txt");
             for(int i = 0; i < this.length; i++){
                 outputFile.write(fib(this.num1) + " ");
                 this.num1++;
