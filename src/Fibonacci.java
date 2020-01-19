@@ -3,9 +3,6 @@
 // (an integer, which has to be smaller than the first printed number).
 // Make the software to write the output to a file.
 //
-//Then, create a xUnit test automation script for your program to test out that the application works.
-// Try to implement at least 3 different types of tests (input, output, attributes, faulty input etc.).
-// Include a proof that your xUnit tool works, by changing the code so that your xUnit tests fail.
 
 import java.io.FileWriter;
 import java.io.IOException;
